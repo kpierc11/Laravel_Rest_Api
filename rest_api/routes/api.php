@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MythicSwords;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/mythic-swords',[MythicSwords::class, 'getSwords']);
+
+Route::get('/mythic-swords/name={name}',[MythicSwords::class, 'getSword']);
