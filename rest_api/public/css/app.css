@@ -63,8 +63,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  padding:0;
-  margin:0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -82,6 +80,7 @@ body {
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -11281,5 +11280,55 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.hero-overlay {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 40%;
+    background-color: black;
+}
+
+.hero-text-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 50%;
+  background-color: black;
+}
+
+.hero-text-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align:center;
+  color: white;
+}
+
+.hero-text {
+  display: flex;
+  font-size:50px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 

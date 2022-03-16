@@ -22,7 +22,4 @@ class MythicSwords extends Controller
             echo json_encode($sword);
     }
 
-    public function showView(){
-        return view('api_docs');
-    }
 }

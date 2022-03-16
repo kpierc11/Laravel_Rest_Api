@@ -19,5 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [LoginController::class, 'showView'] );
-Route::get('/api-docs', [MythicSwords::class, 'showView']);
+Route::get('/login', [LoginController::class, 'showView']);
+
+Route::get('/api-docs', function () {
+    return view('api_docs');
+});
+Route::get('/api-docs/mythic-weapons', function () {
+    return view('api_docs_mythic_weapons');
+});
+
